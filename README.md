@@ -1,5 +1,5 @@
 # TemplateText
-[NuGet Packages](https://www.nuget.org/packages/TemplateTextEx/)
+[NuGet Packages](https://www.nuget.org/packages/TemplateText/)
 .NET Framework 4.7.2
 
 ### Descrição
