@@ -6,6 +6,8 @@
 Biblioteca para uso em templates no formato texto.
 
 #### Recursos
+- Configuração de campos por atributo
+- Configuração de campos pelo usuário
 - Limitar tamanho da linha
 - Limitar tamanho de um texto
 - Textos com tamanhos padrões
@@ -16,6 +18,7 @@ Biblioteca para uso em templates no formato texto.
 
 #### Restrições
 - Os campos devem seguir o seu objeto Ex: se você tem uma classe pedido e uma propriedade id, o seu campo deverá ser {pedido.id}
+- Ao configurar um campo pelo usuário (adicionando na lista PropertyConfigList) a configuração do campo pelo atributo não será usada
 
 #### Como Usar
 - Importe a biblioteca
@@ -111,6 +114,7 @@ string str = "teste\n";
 Configs configs = new Configs();
             configs.LineSizeAjust = true;
             configs.Template = str;
+			configs.PropertyConfigList.Add(new PropertyConfigList("pedido.id", TypesProperty.INT, new AttrConfigs(5, "{0:00000}")));//Configuração de campos pelo usuário
             configs.TemplateList.Add(new TemplateList() { Name = "pedido.itens_pedido", Template = stritem });
             configs.TemplateList.Add(new TemplateList() { Name = "pedido.itens_pedido.subitens_pedido", Template = strsubitem });
 ```
