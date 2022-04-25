@@ -114,7 +114,7 @@ string str = "teste\n";
 Configs configs = new Configs();
             configs.LineSizeAjust = true;
             configs.Template = str;
-			configs.PropertyConfigList.Add(new PropertyConfigList("pedido.id", TypesProperty.INT, new AttrConfigs(5, "{0:00000}")));//Configuração de campos pelo usuário
+			configs.PropertyConfigList.Add(new PropertyConfigList("pedido.id", TypesProperty.INT, new PropertyConfigs(5, "{0:00000}")));//Configuração de campos pelo usuário
             configs.TemplateList.Add(new TemplateList() { Name = "pedido.itens_pedido", Template = stritem });
             configs.TemplateList.Add(new TemplateList() { Name = "pedido.itens_pedido.subitens_pedido", Template = strsubitem });
 ```

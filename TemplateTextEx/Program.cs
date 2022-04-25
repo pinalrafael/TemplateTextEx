@@ -96,7 +96,7 @@ namespace TemplateTextEx
             configs.LineSizeAjust = true;// Ajusta a linha no tamanho informado em LineSize
             configs.LineSize = 38;// Tamanho padrão para a linha o padrão é 38
             configs.Template = str;// Template principal
-            configs.PropertyConfigList.Add(new PropertyConfigList("pedido.id", TypesProperty.INT, new AttrConfigs(5, "{0:00000}")));//Configuração de campos pelo usuário
+            configs.PropertyConfigList.Add(new PropertyConfigList("pedido.id", TypesProperty.INT, new PropertyConfigs(5, "{0:00000}")));//Configuração de campos pelo usuário
             configs.TemplateList.Add(new TemplateList() { Name = "pedido.itens_pedido", Template = stritem });// Demais templates em listas, note que o Name = pedido.itens_pedido deve ser o mesmo [pedido.itens_pedido] no template que chama a lista
             configs.TemplateList.Add(new TemplateList() { Name = "pedido.itens_pedido.subitens_pedido", Template = strsubitem });
             Template Template = new Template(configs);
